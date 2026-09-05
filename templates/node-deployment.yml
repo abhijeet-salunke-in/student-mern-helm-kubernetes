@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: node-deploy
+
+spec:
+  replicas: {{ .Values.node.replicas }}
+
+  selector:
+    matchLabels:
+      app: node
+
+  template:
+    metadata:
+      labels:
+        app: node
+
+    spec:
+      containers:
+        - name: node
+          image: {{ .Values.node.image }}
+
+          ports:
+            - containerPort: {{ .Values.node.port }}
+
+          envFrom:
+            - configMapRef:
+                name: node-config

@@ -1,0 +1,17 @@
+mongodb:
+  image: mongo:7.0
+  replicas: 3
+  storage: 2Gi
+
+node:
+  image: abhisalunke16/student-backend:v1
+  replicas: 2
+  port: 5000
+
+react:
+  image: abhisalunke16/student-frontend:v1
+  replicas: 2
+  port: 80
+
+
+mongoUri: "mongodb://mongodb-0.mongodb:27017,mongodb-1.mongodb:27017,mongodb-2.mongodb:27017/school?replicaSet=rs0"
