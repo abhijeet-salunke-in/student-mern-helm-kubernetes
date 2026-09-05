@@ -1,6 +1,5 @@
 Absolutely. Here is a **GitHub-ready detailed `README.md`** for your Helm repository. It documents not just *what* you deployed, but also the **WHY behind the Kubernetes and Helm design**, which makes it useful as a DevOps portfolio project.
 
-````markdown
 # Student MERN Application on Kubernetes using Helm
 
 A production-style MERN student management application deployed on Kubernetes using Docker, Helm, kOps, and AWS.
@@ -56,7 +55,7 @@ This project demonstrates how a containerized MERN application can be deployed o
                             ▼
                     Persistent Storage
                          AWS EBS
-````
+```
 
 ---
 
